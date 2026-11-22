@@ -11,6 +11,7 @@ services:
       - "443:443"
     volumes:
       - ..:/workspaces/cis047-course-template
+      - phpmyadmin_data:/var/lib/phpmyadmin
     environment:
       - APACHE_DOCUMENT_ROOT=/workspaces/cis047-course-template/public
       - PHP_IDE_CONFIG=serverName=localhost
@@ -52,4 +53,6 @@ networks:
 
 volumes:
   db_data:
+    driver: local
+  phpmyadmin_data:
     driver: local
