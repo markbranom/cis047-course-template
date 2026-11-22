@@ -12,7 +12,8 @@
     "portsAttributes": {
         "80": {
             "label": "Web Application (HTTP)",
-            "onAutoForward": "notify"
+            "onAutoForward": "notify",
+            "visibility": "private"
         },
     },
     "customizations": {
