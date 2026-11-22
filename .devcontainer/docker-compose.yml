@@ -32,8 +32,6 @@ services:
       MYSQL_DATABASE: classdb
       MYSQL_USER: cis047_user
       MYSQL_PASSWORD: cis047_password
-    ports:
-      - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
       - ../database/sample.sql:/docker-entrypoint-initdb.d/sample.sql
