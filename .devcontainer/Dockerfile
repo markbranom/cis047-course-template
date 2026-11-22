@@ -38,8 +38,8 @@ COPY phpmyadmin-config.inc.php \
     /usr/share/phpmyadmin/config.inc.php
 
 RUN a2enconf phpmyadmin \
-    && mkdir -p /var/lib/phpmyadmin
-
+    && mkdir -p /var/lib/phpmyadmin \
+    && chmod 644 /usr/share/phpmyadmin/config.inc.php
 
 # Install and enable Xdebug
 RUN pecl install xdebug && docker-php-ext-enable xdebug
